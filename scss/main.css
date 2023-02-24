@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*------- mixin for display: flex && justify-content: center ---------*/
+/*------- mixin for display: flex && justify-content: flex-start ---------*/
+/*------- mixin for display: flex && justify-content: space-between --------*/
+/*------- function for font-weight map ---------*/
+body {
+  background: url(../images/bg-pattern-top-mobile.svg);
+  background-repeat: no-repeat;
+  font-family: "League Spartan", sans-serif;
+}
+body .container {
+  margin: 40px 20px;
+}
+body .container .heading-text {
+  color: hsl(300deg, 43%, 22%);
+  text-align: center;
+  width: 270px;
+  margin: auto;
+}
+body .container .heading-text h1 {
+  font-weight: 700;
+}
+body .container .sec-heading-text {
+  text-align: center;
+  color: hsl(303deg, 10%, 53%);
+  width: 270px;
+  margin: 20px auto 0px auto;
+}
+body .container .sec-heading-text h3 {
+  font-weight: 500;
+  font-size: 15px;
+}
+body .container .rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+body .container .rating-container .rating-container-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 10px;
+  width: 260px;
+  height: 60px;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  background-color: hsl(300deg, 24%, 96%);
+}
+body .container .rating-container .rating-container-item p {
+  font-weight: 700;
+  color: hsl(300deg, 43%, 22%);
+}
+body .container .testimony-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+body .container .testimony-container .testimony-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 260px;
+  height: 200px;
+  margin-top: 10px;
+  background-color: hsl(300deg, 43%, 22%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 13px;
+  text-align: start;
+}
+body .container .testimony-container .testimony-item .img-heading-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+body .container .testimony-container .testimony-item .img-heading-section img {
+  border-radius: 50px;
+  transform: scale(0.6);
+}
+body .container .testimony-container .testimony-item .img-heading-section .head2 {
+  color: hsl(333deg, 80%, 67%);
+}
+body .container .testimony-container .testimony-item .main-text {
+  padding: 0 30px 0px 30px;
+  line-height: 20px;
+}
+
+/* body {
+    font-weight: weight(bold);
+    color: $primary-color1;
+    font-family: "League Spartan";
+} */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*-------------- media query starts -------------*/
+@media (min-width: 1440px) {
+  body {
+    background: url(../images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+  }
+  body .container {
+    margin: 40px 100px;
+  }
+  body .container .desktop-view-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  body .container .desktop-view-container .heading-text {
+    margin-left: 0;
+  }
+  body .container .desktop-view-container .heading-text h1 {
+    text-align: left;
+  }
+  body .container .desktop-view-container .sec-heading-text {
+    width: 350px;
+    margin-left: 0;
+  }
+  body .container .desktop-view-container .sec-heading-text h3 {
+    text-align: left;
+  }
+  body .container .desktop-view-container .rating-container-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 400px;
+    height: 60px;
+    margin-top: 0;
+  }
+  body .container .desktop-view-container .rating-container-item .star-icon-image {
+    margin-right: 10px;
+  }
+  body .container .desktop-view-container .rating-container-item p {
+    margin-left: 10px;
+  }
+  body .container .desktop-view-container .rating-item1 {
+    position: relative;
+    right: 150px;
+  }
+  body .container .desktop-view-container .rating-item2 {
+    position: relative;
+    right: 75px;
+  }
+  body .container .desktop-view-container .rating-item3 {
+    position: relative;
+    right: 0px;
+  }
+  body .container .testimony-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  body .container .testimony-container .testimony-item {
+    width: 380px;
+  }
+  body .container .testimony-container .testimony-item1 {
+    position: relative;
+    top: 0px;
+  }
+  body .container .testimony-container .testimony-item2 {
+    position: relative;
+    top: 20px;
+  }
+  body .container .testimony-container .testimony-item3 {
+    position: relative;
+    top: 40px;
+  }
+}/*# sourceMappingURL=main.css.map */

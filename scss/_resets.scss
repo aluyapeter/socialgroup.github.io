@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$primary-color1: hsl(300, 43%, 22%);
+$primary-color2: hsl(333, 80%, 67%);
+$secondary-color1: hsl(303, 10%, 53%);
+$secondary-color2: hsl(300, 24%, 96%);
+$secondary-color3: hsl(0, 0%, 100%);
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+//map-get($font-weights, bold);
+

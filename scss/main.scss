@@ -1,0 +1,222 @@
+// @import url(https://fonts.google.com/specimen/League+Spartan);
+@import '../scss/_resets.scss';
+
+
+
+/*------- mixin for display: flex && justify-content: center ---------*/
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+/*------- mixin for display: flex && justify-content: flex-start ---------*/
+@mixin flexStart($direction) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+/*------- mixin for display: flex && justify-content: space-between --------*/
+@mixin flexBetween($direction) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+/*------- function for font-weight map ---------*/
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+body {
+    background: url(../images/bg-pattern-top-mobile.svg);
+    background-repeat: no-repeat;
+    font-family: 'League Spartan', sans-serif;
+
+    .container {
+        margin: 40px 20px;
+    
+        .heading-text {
+            color: $primary-color1;
+            text-align: center;
+            width: 270px;
+            margin: auto;
+    
+            h1 {
+                font-weight: weight(bold);
+            }
+        }
+    
+        .sec-heading-text {
+            text-align: center;
+            color: $secondary-color1;
+            width: 270px;
+            margin: 20px auto 0px auto;
+    
+            h3 {
+                font-weight: weight(medium);
+                font-size: 15px;
+            }
+        }
+    
+        .rating-container {
+            @include flexCenter(column);
+            margin-top: 30px;
+    
+            .rating-container-item {
+                @include flexCenter(column);
+                border: none;
+                border-radius: 10px;
+                width: 260px;
+                height: 60px;
+                margin: 10px 0 10px 0;
+                text-align: center;
+                background-color: $secondary-color2;
+    
+                p {
+                    font-weight: weight(bold);
+                    color: $primary-color1;
+                }
+            }
+           
+        }
+    
+        .testimony-container {
+            @include flexCenter(column);
+            margin-top: 40px;
+    
+            .testimony-item {
+                border: 1px solid black;
+                border-radius: 10px;
+                width: 260px;
+                height: 200px;
+                margin-top: 10px;
+                background-color: $primary-color1;
+                color: $secondary-color3;
+                font-size: 13px;
+                text-align: start;
+    
+                .img-heading-section {
+                    @include flexStart(row);
+    
+                    img {
+                        border-radius: 50px;
+                        transform: scale(0.6);
+                    }
+                    
+                    .head2 {
+                        color: $primary-color2;
+                    }
+                }
+    
+                .main-text {
+                    padding: 0 30px 0px 30px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* body {
+    font-weight: weight(bold);
+    color: $primary-color1;
+    font-family: "League Spartan";
+} */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*-------------- media query starts -------------*/
+
+@media (min-width: 1440px) {
+    body {
+        background: url(../images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+
+        .container {
+            margin: 40px 100px;
+    
+            .desktop-view-container {
+                @include flexBetween(row);
+    
+                .heading-text {
+                    margin-left: 0;
+    
+                    h1 {
+                        text-align: left;
+                    }
+                }
+    
+                .sec-heading-text {
+                    width: 350px;
+                    margin-left: 0;
+    
+                    h3 {
+                        text-align: left;
+                    }
+                }
+    
+                .rating-container-item {
+                    @include flexCenter(row);
+                    width: 400px;
+                    height: 60px;
+                    margin-top: 0;
+    
+                    .star-icon-image {
+                        margin-right: 10px;
+                    }
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+                .rating-item1 {
+                    position: relative;
+                    right: 150px;
+                }
+                .rating-item2 {
+                    position: relative;
+                    right: 75px;
+                }
+                .rating-item3 {
+                    position: relative;
+                    right: 0px;
+                }
+            }
+    
+            .testimony-container {
+                @include flexBetween(row);
+    
+                .testimony-item {
+                    width: 380px;
+                }
+    
+                .testimony-item1 {
+                    position: relative;
+                    top: 0px;
+                }
+    
+                .testimony-item2 {
+                    position: relative;
+                    top: 20px;
+                }
+    
+                .testimony-item3 {
+                    position: relative;
+                    top: 40px;
+                }
+            }
+        }
+    }
+
+}
